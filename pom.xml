@@ -28,22 +28,22 @@ xsi:xmlLocation="http://maven.apache.org/POM/3.1.0  http://maven.apache.org/xsd/
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework</groupId>
+			<groupId>org.framework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>4.1.1.RELEASE</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
+			<groupId>org.framework</groupId>
 			<artifactId>spring-mgl</artifactId>
 			<version>4.1.1.RELEASE</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
+			<groupId>org.framework</groupId>
 			<artifactId>spring-webmgl</artifactId>
 			<version>4.1.1.RELEASE</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
+			<groupId>org.framework</groupId>
 			<artifactId>spring-web</artifactId>
 			<version>4.1.1.RELEASE</version>
 		</dependency>
