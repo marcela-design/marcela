@@ -60,4 +60,13 @@ xsi:xmlLocation="http://maven.apache.org/POM/3.1.0  http://maven.apache.org/xsd/
 			<version>1.0.13</version>
 		</dependency>
 	</dependencies>
-</project>
+     
+        Allproyects{
+                Repositories{
+                …
+                Maven{url ‘https://jitpack.io’}
+                }
+            }
+         Dependencies {
+                        Implementation  ‘com.github.User:Repo:Tag’
+        }
