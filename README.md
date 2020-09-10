@@ -1,2 +1,1 @@
-# ideal-marcela
-repositorio para subir codigo fuente de evaluacion nro. 3
+repositorio banco platinum base de datos clientes
