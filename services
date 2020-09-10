@@ -29,9 +29,9 @@ package api.services;
 		private static final List<User> users = new ArrayList<>();
 		
 		static {
-			users.add(new User(1L, "oscar", "1234"));
-			users.add(new User(2L, "juan", "1234"));
-			users.add(new User(3L, "maria", "1234"));
+			users.add(new User(1L, "      "));
+			users.add(new User(2L, "      "));
+			users.add(new User(3L, "      "));
 		}
 		
 		
