@@ -1,0 +1,26 @@
+Public void test1() throws Exception {
+    // Conectar a la base de datos MySQL
+    IDatabaseConnection connection = databaseTester.getConnection();
+    DatabaseConfig dbconfig = connection.getConfig();
+    dbconfig.setProperty(
+            "http://www.dbunit.org/properties/datatypeFactory",
+            new MySqlDataTypeFactory());
+ 
+    // Crear el DataSet de la base de datos MySQL
+    QueryDataSet partialDataSet = new QueryDataSet(connection);
+    partialDataSet.addTable("tabla1");
+    partialDataSet.addTable("tabla2");
+    partialDataSet.addTable("tabla3");
+ 
+    // Escribir el DataSet en XML para después compararlo con el esperado
+    File outputFile = new File("db-output.xml");
+    FlatXmlDataSet.write(partialDataSet, new FileOutputStream(outputFile));
+ 
+    // Obtener los datos esperados del XML
+    URL url = IDatabaseTester.class.getResource("/db-expected1.xml");
+    Assert.assertNotNull(url);
+    File inputFile = new File(url.getPath());
+ 
+    // Comparar los ficheros XML
+    Assert.assertEquals(FileUtils.readFileToString(inputFile, "UTF8"),
+            FileUtils.readFileToString(outputFile, "UTF8"));
